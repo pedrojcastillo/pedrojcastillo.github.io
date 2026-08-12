@@ -111,14 +111,9 @@
             <div class="hero-buttons">
               <a href="#projects" class="btn btn-primary"> Ver proyectos </a>
 
-              <a
-                href="assets/cv/CV_Pedro_Castillo.pdf"
-                target="_blank"
-                rel="noopener"
-                class="btn btn-secondary"
-              >
+              <button type="button" class="btn btn-secondary" id="openCv">
                 Ver CV
-              </a>
+              </button>
             </div>
 
             <div class="hero-tags">
@@ -549,6 +544,31 @@
         </button>
       </div>
     </main>
+
+    <!-- ===================== -->
+    <!-- CV MODAL -->
+    <!-- ===================== -->
+
+    <div class="cv-modal" id="cvModal">
+      <div class="cv-overlay"></div>
+
+      <div class="cv-container">
+        <button
+          type="button"
+          class="cv-close"
+          id="closeCv"
+          aria-label="Cerrar CV"
+        >
+          <i data-lucide="x"></i>
+        </button>
+
+        <iframe
+          class="cv-viewer"
+          src="assets/cv/CV_Pedro_Castillo.pdf"
+          title="Currículum Vitae de Pedro Castillo"
+        ></iframe>
+      </div>
+    </div>
 
     <footer class="footer">
       <div class="container">

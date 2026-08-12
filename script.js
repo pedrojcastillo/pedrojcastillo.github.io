@@ -123,6 +123,31 @@ const closeModal = document.querySelector(".video-close");
 
 const overlay = document.querySelector(".video-overlay");
 
+/* ==================================================
+CV Modal
+================================================== */
+
+const cvModal = document.getElementById("cvModal");
+const openCv = document.getElementById("openCv");
+const closeCv = document.getElementById("closeCv");
+const cvOverlay = document.querySelector(".cv-overlay");
+
+function openCvModal() {
+  cvModal.classList.add("active");
+  lockScroll();
+}
+
+function closeCvModal() {
+  cvModal.classList.remove("active");
+  unlockScroll();
+}
+
+openCv.addEventListener("click", openCvModal);
+
+closeCv.addEventListener("click", closeCvModal);
+
+cvOverlay.addEventListener("click", closeCvModal);
+
 overlay.addEventListener("click", closeVideoModal);
 
 const videoButtons = document.querySelectorAll(".project-video");
